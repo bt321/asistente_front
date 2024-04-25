@@ -1,0 +1,11 @@
+/* login.component.css */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+  }
+  
+  input, button {
+    margin-bottom: 10px;
+  }

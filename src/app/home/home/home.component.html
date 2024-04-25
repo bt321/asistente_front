@@ -1,0 +1,32 @@
+<div *ngIf="mostrarComponenteOrigen">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+  <div class="derecha">
+    <h2>EMPIEZA UNA VIDA SANA</h2>
+    <h3>Registrarse</h3>
+  
+    <nav>
+      <button class = "btn btn-primary" (click) = "irInicio()"> iniciar sesion </button>
+ 
+      <a routerLink = '/inicio_sesion'> Login </a> 
+      <a routerLink="/home">Volver a la Página de Inicio</a>
+    </nav>
+ 
+  </div>
+  <div class="izquierda">
+    <h1>Tu asistente nutricional y fitness</h1>
+  </div>
+  <div class="logo">
+    <img src="assets/NUTRIAILOGO.png">
+  </div>
+  
+</body>
+
+</html>
+</div>  

@@ -1,0 +1,52 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to right, #D5FFD4 50%, white 50%);
+  }
+
+  h1 {
+    text-align: center;
+    padding: 20px;
+    color: #000000;
+    justify-content: center;
+    font-size: 35px;
+    
+  }
+  h2 {
+    text-align: center;
+    padding: 20px;
+    color: #333; 
+    justify-content: center;
+    font-size: 25px;
+    
+  }
+  h3 {
+    background-color: #65ac26;
+    text-align: center;
+    padding: 20px;
+    color: #333; 
+    justify-content: center;
+    font-size: 25px;
+    
+  }
+  .derecha {
+    position: absolute;
+    top: 320px;
+    right: 350px;
+  }
+  .izquierda {
+    position: absolute;
+    top: 430px;
+    left: 240px;
+  }
+  .logo {
+    position: absolute;
+    top: 380px;
+    left: 350px;
+  }
+  
