@@ -12,7 +12,7 @@ export class LoginComponent {
 
   login() {
     console.log('Nombre de usuario:', this.username);
-    console.log('Contraseña:', this.password);
+    console.log('Contraseña:', this.password);  
 
 }
 }
