@@ -17,6 +17,11 @@ export class HomeComponent implements OnInit {
     this.route.navigate(['/inicio_sesion'])
     this.mostrarComponenteOrigen = false;
 }
+  registrarse() {
+    //console.log('inicio_sesion')
+    this.route.navigate(['/registrarse'])
+    this.mostrarComponenteOrigen = false;
+}
 
  
 }

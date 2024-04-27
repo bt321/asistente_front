@@ -49,4 +49,20 @@ body {
     top: 380px;
     left: 350px;
   }
+  .boton-bonito {
+    background-color: #65ac26; /* Color de fondo */
+    border: none; /* Eliminar borde */
+    color: 333; /* Color de texto */
+    padding: 15px 32px; /* Espaciado interior */
+    text-align: center; /* Alinear texto al centro */
+    text-decoration: none; /* Eliminar subrayado */
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px; /* Redondear esquinas */
+    transition: background-color 0.3s ease; /* Transición suave de color de fondo */
+  }
+  
+  .boton-bonito:hover {
+    background-color: #e70000; /* Cambiar color de fondo al pasar el ratón */
+  }
   
