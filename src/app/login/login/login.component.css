@@ -9,3 +9,32 @@ form {
   input, button {
     margin-bottom: 10px;
   }
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to right, #D5FFD4 100%, white 0%);
+  }
+  .logo {
+    position: absolute;
+    top: 320px;
+    left: 810px;
+  }
+  .boton-bonito {
+    background-color: #65ac26; /* Color de fondo */
+    border: none; /* Eliminar borde */
+    color: 333; /* Color de texto */
+    padding: 10px 10px; /* Espaciado interior */
+    text-align: center; /* Alinear texto al centro */
+    text-decoration: none; /* Eliminar subrayado */
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px; /* Redondear esquinas */
+    transition: background-color 0.3s ease; /* Transición suave de color de fondo */
+  }
+  .boton-bonito:hover {
+    background-color: #b9b9b9; /* Cambiar color de fondo al pasar el ratón */
+  }

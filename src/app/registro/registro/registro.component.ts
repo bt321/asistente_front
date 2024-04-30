@@ -7,13 +7,11 @@ import { Router } from '@angular/router';
   styleUrl: './registro.component.css'
 })
 export class RegistroComponent implements OnInit {
-  mostrarComponenteOrigen: boolean = true;
   constructor(private route : Router){}
   ngOnInit(){}
 
   solicitar_datos(){
     this.route.navigate(['/solicita_datos'])
-    this.mostrarComponenteOrigen = false;
   }
 
 }

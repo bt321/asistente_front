@@ -1,11 +1,20 @@
-<form>
-    <input type="text" placeholder="Nombre" name="nombre">
-    <input type="text" placeholder="Apellidos" name="apellidos">
-    <input type="text" placeholder="Conraseña" name="password">
-    <input type="text" placeholder="Repite contraseña" name="password2">
-    <select class="form-control" id="exampleSelect">
-        <option value="option1">Masculino</option>
-        <option value="option2">Femenino</option>
-      </select>
-    <button type="submit">Continuar </button>
-</form>
+<body>
+  <div class="contenedor">
+    <form>
+      <div class="logo">
+        <img src="assets/NUTRIAILOGO.png">
+      </div>
+        <input type="text" placeholder="Nombre" name="nombre">
+        <input type="text" placeholder="Apellidos" name="apellidos">
+        <input type="text" placeholder="Conraseña" name="password">
+        <input type="text" placeholder="Repite contraseña" name="password2">
+        <select class="form-control" id="exampleSelect">
+          <option value="" disabled selected>Género</option>
+            <option value="option1">Hombre</option>
+            <option value="option2">Mujer</option>
+          </select>
+          <br>
+        <button class="boton-bonito" type="submit" (click) = "continuar()">Continuar</button>
+    </form>
+</div>
+</body>

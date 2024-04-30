@@ -10,6 +10,7 @@ import { SolicitarDatosComponent } from './solicitar-datos/solicitar-datos.compo
   ],
   imports: [
     CommonModule
-  ]
+  ], 
+  exports: [SolicitarDatosComponent]
 })
 export class SolicitarDatosModule { }

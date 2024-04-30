@@ -8,3 +8,43 @@ form {
   input, button {
     margin-bottom: 10px;
   }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to right, #D5FFD4 100%, white 0%);
+  }
+  .boton-bonito {
+    background-color: #65ac26; /* Color de fondo */
+    border: none; /* Eliminar borde */
+    color: 333; /* Color de texto */
+    padding: 10px 10px; /* Espaciado interior */
+    text-align: center; /* Alinear texto al centro */
+    text-decoration: none; /* Eliminar subrayado */
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px; /* Redondear esquinas */
+    transition: background-color 0.3s ease; /* Transición suave de color de fondo */
+  }
+  .boton-bonito:hover {
+    background-color: #b9b9b9; /* Cambiar color de fondo al pasar el ratón */
+  }
+  .logo {
+    margin-bottom: 20px;
+  }
+  .contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    height: 100vh;
+  }
+  input[type="text"], button {
+    width: 100%;
+    max-width: 300px; /* Ancho máximo para evitar que se estiren demasiado en pantallas grandes */
+}
+

@@ -32,7 +32,7 @@ form {
   .boton-bonito:hover {
     background-color: #b9b9b9; /* Cambiar color de fondo al pasar el ratón */
   }
-
+  
 
   .logo {
     margin-bottom: 20px;
@@ -48,5 +48,6 @@ form {
     width: 100%;
     max-width: 300px; /* Ancho máximo para evitar que se estiren demasiado en pantallas grandes */
 }
+
 
 

@@ -1,68 +1,93 @@
-
 body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to right, #D5FFD4 50%, white 50%);
+}
+
+h1, h2, h3 {
+  text-align: center;
+  padding: 2vw;
+  color: #333;
+}
+
+h1 { font-size: 2.5vw; }
+h2 { font-size: 2.5vw; }
+h3 { 
+  background-color: #65ac26;
+  font-size: 2.5vw;
+}
+
+.derecha {
+  position: absolute;
+  top: 20vw;
+  right: 10vw;
+}
+
+.izquierda {
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 30vw;
+  left: 5vw;
+  height: 100vh;
+}
+
+.logo {
+    margin-bottom: 20px;
+  }
+  .contenedor{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(to right, #D5FFD4 50%, white 50%);
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    height: 100vh;
   }
+  input[type="text"], button {
+    width: 100%;
+    max-width: 300px; /* Ancho máximo para evitar que se estiren demasiado en pantallas grandes */
+}
 
-  h1 {
-    text-align: center;
-    padding: 20px;
-    color: #000000;
-    justify-content: center;
-    font-size: 35px;
-    
+
+
+.boton-bonito {
+  background-color: #65ac26;
+  border: none;
+  color: #333;
+  padding: 2vw 5vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5vw;
+  border-radius: 2vw;
+  transition: background-color 0.3s ease;
+}
+.boton-bonito:hover {
+  background-color: #e70000;
+}
+
+.botones {
+  position: absolute;
+  top: 10vw;
+  left: 10vw;
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 768px) {
+  h1, h2, h3 {
+      font-size: 4vw;
   }
-  h2 {
-    text-align: center;
-    padding: 20px;
-    color: #333; 
-    justify-content: center;
-    font-size: 25px;
-    
+}
+
+@media only screen and (max-width: 600px) {
+  .derecha, .izquierda, .botones {
+      position: relative;
+      top: auto;
+      left: auto;
+      margin: 5vw auto;
   }
-  h3 {
-    background-color: #65ac26;
-    text-align: center;
-    padding: 20px;
-    color: #333; 
-    justify-content: center;
-    font-size: 25px;
-    
-  }
-  .derecha {
-    position: absolute;
-    top: 320px;
-    right: 350px;
-  }
-  .izquierda {
-    position: absolute;
-    top: 430px;
-    left: 240px;
-  }
-  .logo {
-    position: absolute;
-    top: 380px;
-    left: 350px;
-  }
-  .boton-bonito {
-    background-color: #65ac26; /* Color de fondo */
-    border: none; /* Eliminar borde */
-    color: 333; /* Color de texto */
-    padding: 15px 32px; /* Espaciado interior */
-    text-align: center; /* Alinear texto al centro */
-    text-decoration: none; /* Eliminar subrayado */
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 8px; /* Redondear esquinas */
-    transition: background-color 0.3s ease; /* Transición suave de color de fondo */
-  }
-  
-  .boton-bonito:hover {
-    background-color: #e70000; /* Cambiar color de fondo al pasar el ratón */
-  }
-  
+}

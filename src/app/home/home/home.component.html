@@ -1,4 +1,4 @@
-<div *ngIf="mostrarComponenteOrigen">
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,14 +9,16 @@
 <body>
   <div class="derecha">
     <h2>EMPIEZA UNA VIDA SANA</h2>
-
-    <nav>
-      <button class = "boton-bonito" (click) = "registrarse()"> Registrarse </button>
-    </nav>
-
-    <nav>
-      <button class = "boton-bonito" (click) = "irInicio()"> Iniciar sesion </button>
-    </nav>
+    <div class="botones">
+      <nav>
+        <button class = "boton-bonito" (click) = "registrarse()"> Registrarse </button>
+      </nav>
+      <br>
+      <nav>
+        <button class = "boton-bonito" (click) = "irInicio()"> Iniciar sesion </button>
+      </nav>
+  </div>
+   
  
   </div>
   <div class="izquierda">
@@ -29,4 +31,4 @@
 </body>
 
 </html>
-</div>  
+
