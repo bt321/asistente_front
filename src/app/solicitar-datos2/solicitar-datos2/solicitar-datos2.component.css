@@ -30,7 +30,7 @@ form {
     transition: background-color 0.3s ease; /* Transición suave de color de fondo */
   }
   .boton-bonito:hover {
-    background-color: #b9b9b9; /* Cambiar color de fondo al pasar el ratón */
+    background-color: #ff00009d; /* Cambiar color de fondo al pasar el ratón */
   }
   
 
@@ -48,6 +48,16 @@ form {
     width: 100%;
     max-width: 300px; /* Ancho máximo para evitar que se estiren demasiado en pantallas grandes */
 }
+.input-curvo {
+  border: 2px solid #b1b0b0; /* Establece un borde sólido */
+  font-size: 16px; /* Tamaño de fuente */
+  outline: none; /* Elimina el contorno al hacer clic */
+  transition: border-color 0.3s ease; /* Transición suave del color del borde */
+}
+.input-curvo:focus {
+  border-color: #48ff00; /* Cambia el color del borde al enfocar el input */
+}
+
 
 
 

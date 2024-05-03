@@ -12,6 +12,8 @@ h1, h2, h3 {
   text-align: center;
   padding: 2vw;
   color: #333;
+  font-family: Georgia;
+
 }
 
 h1 { font-size: 2.5vw; }
@@ -22,59 +24,71 @@ h3 {
 }
 
 .derecha {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos en columna */
+  align-items: center; /* Centra horizontalmente los elementos */
+  justify-content: center; /* Centra verticalmente los elementos */
   position: absolute;
-  top: 20vw;
-  right: 10vw;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%; /* Ocupa la mitad derecha de la página */
+  flex: 1; /* Hace que la parte izquierda ocupe el espacio sobrante */
+  text-align: center;
 }
 
 .izquierda {
-  align-items: left;
-  justify-content: center;
-  flex-direction: column;
+  display: flex;
+  flex-direction: column; /* Alinea los elementos en columna */
+  align-items: center; /* Centra horizontalmente los elementos */
+  justify-content: center; /* Centra verticalmente los elementos */
   position: absolute;
-  top: 30vw;
-  left: 5vw;
-  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%; /* Ocupa la mitad izquierda de la página */
+  text-align: center;
 }
 
 .logo {
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
+    text-align: center;
+    margin-top: 20px
   }
-  .contenedor{
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra los elementos horizontalmente */
-    justify-content: center; /* Centra los elementos verticalmente */
-    height: 100vh;
-  }
-  input[type="text"], button {
-    width: 100%;
-    max-width: 300px; /* Ancho máximo para evitar que se estiren demasiado en pantallas grandes */
-}
-
-
 
 .boton-bonito {
   background-color: #65ac26;
   border: none;
   color: #333;
-  padding: 2vw 5vw;
+  padding: 1.5vw 3vw;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 1.5vw;
   border-radius: 2vw;
   transition: background-color 0.3s ease;
+  font-family: Georgia;
 }
 .boton-bonito:hover {
-  background-color: #e70000;
+  background-color: #ff00009d;
 }
 
 .botones {
   position: absolute;
-  top: 10vw;
-  left: 10vw;
+  top: 25vw;
+  left: 15vw;
 }
+.separator-vertical {
+  width: 2px; /* Ancho de la línea */
+  height: 100vh; /* Altura de la línea, en este caso ocupa toda la altura de la ventana */
+  background-color: #a4a3a3; /* Color de la línea */
+  position: fixed; /* Posición fija para que se mantenga en la misma posición al desplazar la página */
+  top: 0; /* Lo colocamos en la parte superior de la página */
+  left: 50%; /* Lo centramos horizontalmente */
+  transform: translateX(-50%); /* Ajustamos la posición horizontal para que esté centrada */
+}
+
+
 
 /* Media Queries for Responsive Design */
 @media only screen and (max-width: 768px) {

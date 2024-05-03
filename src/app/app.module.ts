@@ -11,6 +11,11 @@ import { LoginComponent } from './login/login/login.component';
 import { RegistroComponent } from './registro/registro/registro.component';
 import { SolicitarDatosModule } from './solicitar-datos/solicitar-datos.module';
 import { SolicitarDatos2Module } from './solicitar-datos2/solicitar-datos2.module';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { FormsModule } from '@angular/forms';
+import { RegistroModule } from './registro/registro.module';
+import { RutinaModule } from './rutina/rutina.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -22,9 +27,14 @@ import { SolicitarDatos2Module } from './solicitar-datos2/solicitar-datos2.modul
     HomeModule,
     LoginModule,
     SolicitarDatosModule,
-    SolicitarDatos2Module
+    SolicitarDatos2Module,
+    RegistroModule,
+    BsDropdownModule.forRoot(),
+    FormsModule,
+    RutinaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+ 

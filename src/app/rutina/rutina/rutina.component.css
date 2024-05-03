@@ -8,14 +8,13 @@ form {
   input, button {
     margin-bottom: 10px;
   }
-  
   body {
     margin: 0;
     padding: 0;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     background: linear-gradient(to right, #D5FFD4 100%, white 0%);
   }
   .boton-bonito {
@@ -31,8 +30,10 @@ form {
     transition: background-color 0.3s ease; /* Transición suave de color de fondo */
   }
   .boton-bonito:hover {
-    background-color: #ff00009d; /* Cambiar color de fondo al pasar el ratón */
+    background-color: #b9b9b9; /* Cambiar color de fondo al pasar el ratón */
   }
+
+
   .logo {
     margin-bottom: 20px;
   }
@@ -47,14 +48,9 @@ form {
     width: 100%;
     max-width: 300px; /* Ancho máximo para evitar que se estiren demasiado en pantallas grandes */
 }
-.input-curvo {
-  border: 2px solid #b1b0b0; /* Establece un borde sólido */
-  font-size: 16px; /* Tamaño de fuente */
-  outline: none; /* Elimina el contorno al hacer clic */
-  transition: border-color 0.3s ease; /* Transición suave del color del borde */
+.custom-navbar {
+  background-color: #00ac4dea; /* Cambia el color de fondo del menú */
 }
-.input-curvo:focus {
-  border-color: #48ff00; /* Cambia el color del borde al enfocar el input */
-}
+
 
 
