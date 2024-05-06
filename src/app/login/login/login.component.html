@@ -1,11 +1,10 @@
-<!-- login.component.html -->
 <body>
-<form (ngSubmit)="login()">
+<form>
   <div class="logo">
     <img src="assets/NUTRIAILOGO.png">
   </div>
-    <input type="text" class="input-curvo" placeholder="Nombre de usuario" name="username">
-    <input type="password" class="input-curvo" placeholder="Contraseña" name="password">
-    <button class="boton-bonito" type="submit" >Iniciar sesión</button>
+    <input type="text" class="input-curvo" placeholder="Nombre de usuario" [(ngModel)]="username" name="username">
+    <input type="password" class="input-curvo" placeholder="Contraseña" [(ngModel)]="password1" name="password">
+    <button class="boton-bonito" type="submit" (click) = menu()>Iniciar sesión</button>
   </form>
 </body>

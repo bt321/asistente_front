@@ -16,6 +16,9 @@ import { FormsModule } from '@angular/forms';
 import { RegistroModule } from './registro/registro.module';
 import { RutinaModule } from './rutina/rutina.module';
 import { RouterModule } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import { RouterModule } from '@angular/router';
     RegistroModule,
     BsDropdownModule.forRoot(),
     FormsModule,
-    RutinaModule
+    RutinaModule,
+    HttpClient
   ],
   providers: [],
   bootstrap: [AppComponent]
