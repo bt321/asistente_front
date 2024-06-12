@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RegistroComponent } from './registro/registro.component';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from '../app-routing.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -9,7 +12,11 @@ import { RegistroComponent } from './registro/registro.component';
     RegistroComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    AppRoutingModule,
+    RouterModule
+
   ]
 })
 export class RegistroModule { }

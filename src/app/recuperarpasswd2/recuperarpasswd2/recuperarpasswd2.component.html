@@ -1,0 +1,25 @@
+<body>
+    
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+                <form >
+                        
+                  <div class="form-group mb-3">
+                    <label for="password" class="form-label">Contraseña nueva</label>
+                    <input type="password" id="password" [(ngModel)]="password_nueva" name="password_nueva" class="form-control" required>
+                  </div>
+      
+                  <div class="form-group mb-3">
+                    <label for="password" class="form-label">Repetir contraseña nueva</label>
+                    <input type="password" id="password" [(ngModel)]="password_nueva2" name="password_nueva2" class="form-control" required>
+                  </div>
+      
+                  <div class="text-center">
+                    <button class="boton-bonito" type="submit" type="button" (click) = 'recuperarPasswd()'>Actualizar</button>
+                  </div>
+                </form>
+          </div>
+        </div>
+      </div>
+</body>

@@ -1,16 +1,33 @@
 <body>
     <form>
         <h1>¿Cuál es tu objetivo?</h1>
-                <select class="form-control" id="exampleSelect">
-                <option value="" disabled selected>selecciona objetivo</option>
-                    <option value="option1">Volumen moscular</option>
-                    <option value="option2">Definición muscular</option>
-                    <option value="option2">Proporciones equilibradas</option>
-                    <option value="option2">Reduccion de grasa</option>
-                    <option value="option2">Tono muscular</option>
-                    <option value="option2">Definición abdominal</option>
+        <br>
+        
+        <div class="form-group">
+            <div class="input-group">
+                <input type="number" class="form-control" placeholder="Peso actual" [(ngModel)]="peso_actual" name="peso_actual">
+              <div class="input-group-append">
+                <span class="input-group-text">kg</span>
+              </div>
+            </div>
+          </div>
+        
+        <div class="form-group">
+            <div class="input-group">
+                <input type="number" id="peso_objetivo" class="form-control" placeholder="Peso Objetivo" [(ngModel)]="peso_objetivo" name="peso_objetivo">
+              <div class="input-group-append">
+                <span class="input-group-text">kg</span>
+              </div>
+            </div>
+          </div>
+                <select class="form-control" id="exampleSelect" [(ngModel)]="tipo_objetivo" name="tipo_objetivo" >
+                <option value="" disabled>Selecciona objetivo</option>
+                    <option value="Volumen muscular">Volumen muscular</option>
+                    <option value="Definición muscular">Definición muscular</option>
+                    <option value="Proporciones equilibradas">Proporciones equilibradas</option>
                 </select>
                 <br>
                 <button class="boton-bonito" type="submit" (click)="descanso()">Continuar</button>
+                <button class="boton-bonito"  type="submit" href="#" routerLink ='/registrarse'>Volver</button>
     </form>
-</body>
+</body> 

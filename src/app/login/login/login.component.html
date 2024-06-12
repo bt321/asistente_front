@@ -1,10 +1,20 @@
 <body>
-<form>
-  <div class="logo">
-    <img src="assets/NUTRIAILOGO.png">
-  </div>
-    <input type="text" class="input-curvo" placeholder="Nombre de usuario" [(ngModel)]="username" name="username">
-    <input type="password" class="input-curvo" placeholder="Contraseña" [(ngModel)]="password1" name="password">
-    <button class="boton-bonito" type="submit" (click) = menu()>Iniciar sesión</button>
+  <form>
+    <div class="logo">
+      <img src="assets/NUTRIAILOGO.png" class="clickable-image" routerLink = "/" >
+      </div>
+      <input type="text" class="form-control" id="username" placeholder="Nombre de usuario" [(ngModel)]="username" name="username" >
+      <input type="password" class="form-control" id="password" placeholder="Contraseña" [(ngModel)]="password" name="password">
+      <button class="boton-bonito" type="submit" (click) = loginUser()>Iniciar sesión</button>
+           
+      <div> 
+        <a>¿No tienes cuenta? </a>
+        <a routerLink = "/registrarse">Regístrate</a>
+        <div class="centrar" >
+          <a routerLink = "/recuperarPasswd" placeholder="#">He olvidado mi contraseña</a>
+        </div> 
+      </div>
+      
+      
   </form>
 </body>

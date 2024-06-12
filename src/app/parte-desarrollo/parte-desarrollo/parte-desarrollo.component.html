@@ -1,0 +1,28 @@
+<body>
+    <form>
+        <h3>Selecciona la parte del cuerpo que más desea desarrollar</h3>
+                <select class="form-control" id="exampleSelect" name="musculoDesarrollo" [(ngModel)]="musculoDesarrollo">
+                <option value="" disabled selected>Selecciona musculo a desarrollar</option>
+                    <option value="Abdominales">Abdominales</option>
+                    <option value="Aductores">Aductores</option>
+                    <option value="Abductores">Abductores</option>
+                    <option value="Bíceps">Bíceps</option>
+                    <option value="Gemelos">Gemelos</option>
+                    <option value="Antebrazos">Antebrazos</option>
+                    <option value="Glúteos">Glúteos</option>
+                    <option value="Isquiotibiales">Isquiotibiales</option>
+                    <option value="Dorsales">Dorsales</option>
+                    <option value="Espalda baja">Espalda baja</option>
+                    <option value="Espalda media">Espalda media</option>
+                    <option value="Traps">Traps</option>
+                    <option value="Pecho">Pecho</option>
+                    <option value="Cuello">Cuello</option>
+                    <option value="Cuádriceps">Cuádriceps</option>
+                    <option value="Hombros">Hombros</option>
+                    <option value="Tríceps">Tríceps</option>
+                </select>
+                <br>
+                <button class="boton-bonito" type="submit" (click)="parteFuerte()">Continuar</button>
+                <button class="boton-bonito" (click)="volver()">Volver</button>
+    </form>
+</body>

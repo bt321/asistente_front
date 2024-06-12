@@ -2,10 +2,39 @@
 <div class = "contenedor">
 <form> 
     <div class="logo">
-        <img src="assets/NUTRIAILOGO.png">
+        <img class="clickable-image" src="assets/NUTRIAILOGO.png" routerLink = '/'>
       </div>
-    <input type="text" class="input-curvo" placeholder="Correo electrónico" name="email">
+    <input type="text" class="form-control" placeholder="Nombre de usuario" [(ngModel)]="username" name="username">
+    <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="nombre" name="nombre">
+    <input type="text" class="form-control" placeholder="Apellidos" [(ngModel)]="apellidos" name="apellidos">
+    <input type="email" class="form-control" placeholder="Email" [(ngModel)]="email" name="Email">
+    <input type="password" class="form-control" placeholder="Contraseña" [(ngModel)]="password" name="password">
+    <input type="password" class="form-control" placeholder="Repite contraseña" [(ngModel)]="password2" name="password2">
+    <div class="form-group">
+      <div class="input-group">
+        <input type="number" id="altura" class="form-control" placeholder="Altura" [(ngModel)]="altura" name="altura">
+        <div class="input-group-append">
+          <span class="input-group-text">cm</span>
+        </div>
+      </div>
+    </div>
+      <select class="form-control" [(ngModel)]="nivel_experiencia" id="nivel_experiencia" name="nivel_experiencia" style="margin-bottom: 10px;">
+          <option value="" disabled>Nivel de experiencia</option>
+          <option value="Principiante">Principiante</option>
+          <option value="Intermedio">Intermedio</option>
+          <option value="Avanzado">Avanzado</option>
+        </select>
+        <select class="form-control" id="genero" [(ngModel)]="genero" name="genero" style="margin-bottom: 10px;">
+            <option value="" disabled>Género</option>
+            <option value="Hombre">Hombre</option>
+            <option value="Mujer">Mujer</option>
+          </select>
     <button class="boton-bonito" type="submit" (click) = solicitar_datos()>Continuar</button>
+    <div>
+      <a>¿Ya tienes cuenta? </a>
+      <a routerLink = '/inicio_sesion'>Inicia sesión</a>
+    </div>
+    
 </form>
 </div>
 </body>

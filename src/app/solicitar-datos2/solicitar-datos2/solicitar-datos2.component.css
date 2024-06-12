@@ -30,7 +30,7 @@ form {
     transition: background-color 0.3s ease; /* Transición suave de color de fondo */
   }
   .boton-bonito:hover {
-    background-color: #ff00009d; /* Cambiar color de fondo al pasar el ratón */
+    background-color: #78c2ad; /* Cambiar color de fondo al pasar el ratón */
   }
   
 

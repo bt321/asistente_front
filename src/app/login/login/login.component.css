@@ -14,7 +14,7 @@ form {
   body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,7 +34,7 @@ form {
     transition: background-color 0.3s ease; /* Transición suave de color de fondo */
   }
   .boton-bonito:hover {
-    background-color: #ff00009d; /* Cambiar color de fondo al pasar el ratón */
+    background-color: #78c2ad; /* Cambiar color de fondo al pasar el ratón */
   }
   .input-curvo {
     border: 2px solid #b1b0b0; /* Establece un borde sólido */
@@ -45,5 +45,11 @@ form {
   .input-curvo:focus {
     border-color: #48ff00; /* Cambia el color del borde al enfocar el input */
   }
-  
+
+  .centrar {
+    text-align: center;
+  }
+  .clickable-image {
+    cursor: pointer;
+  }
   

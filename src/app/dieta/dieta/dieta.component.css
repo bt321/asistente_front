@@ -1,52 +1,170 @@
 form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin: auto;
-  }
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+}
+
+input, button {
+  margin-bottom: 10px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  background: linear-gradient(to right, #dff0de 100%, white 0%);
+}
+.boton-bonito {
+  background-color: #78c2ad; /* Color de fondo */
+  border: none; /* Eliminar borde */
+  color: 333; /* Color de texto */
+  padding: 10px 10px; /* Espaciado interior */
+  text-align: center; /* Alinear texto al centro */
+  text-decoration: none; /* Eliminar subrayado */
+  display: inline-block;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center; 
+  border-radius: 8px; /* Redondear esquinas */
+  transition: background-color 0.3s ease; /* Transición suave de color de fondo */
   
-  input, button {
-    margin-bottom: 10px;
-  }
-  body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    background: linear-gradient(to right, #D5FFD4 100%, white 0%);
-  }
-  .boton-bonito {
-    background-color: #65ac26; /* Color de fondo */
-    border: none; /* Eliminar borde */
-    color: 333; /* Color de texto */
-    padding: 10px 10px; /* Espaciado interior */
-    text-align: center; /* Alinear texto al centro */
-    text-decoration: none; /* Eliminar subrayado */
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 8px; /* Redondear esquinas */
-    transition: background-color 0.3s ease; /* Transición suave de color de fondo */
-  }
-  .boton-bonito:hover {
-    background-color: #b9b9b9; /* Cambiar color de fondo al pasar el ratón */
-  }
-
-
-  .logo {
-    margin-bottom: 20px;
-  }
-  .contenedor{
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra los elementos horizontalmente */
-    justify-content: center; /* Centra los elementos verticalmente */
-    height: 100vh;
-  }
-  input[type="text"], button {
-    width: 100%;
-    max-width: 300px; /* Ancho máximo para evitar que se estiren demasiado en pantallas grandes */
+}
+.boton-bonito:hover {
+  background-color: #00ac4dea; /* Cambiar color de fondo al pasar el ratón */
 }
 
 
+.logo {
+  margin-bottom: 20px;
+}
+.contenedor{
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: 100%; /* Centra los elementos verticalmente */
+  height: 100vh;
+}
+input[type="text"], button {
+  width: 100%;
+  max-width: 300px; /* Ancho máximo para evitar que se estiren demasiado en pantallas grandes */
+}
+.custom-navbar {
+background-color: #00ac4dea; /* Cambia el color de fondo del menú */
+}
+.custom-bg-color {
+background-color: #78c2ad; /* Cambia esto al color que desees */
+}
+.position-top-right {
+position: absolute;
+top: 10px; 
+right: 10px;
+
+}
+.texto-piepag{
+color: rgb(0, 0, 0); /* Color del texto */
+font-size: 16px; /* Tamaño del texto */
+left: 0; /* Alinea el elemento en el borde izquierdo */
+}
+.text-overlay {
+position: absolute;
+bottom: 0; /* Alinea el elemento en la parte inferior */
+width: 100%; /* Ocupa todo el ancho disponible */
+background-color: #78c2ad; /* Fondo semitransparente */
+box-sizing: border-box; /* Incluye el padding en el ancho total */
+text-align: left; /* Centra el texto horizontalmente */
+}
+
+.texto-piepag{
+color: rgb(0, 0, 0); /* Color del texto */
+font-size: 16px; /* Tamaño del texto */
+left: 0; /* Alinea el elemento en el borde izquierdo */
+}
+
+.text-overlay {
+position: absolute;
+bottom: 0; /* Alinea el elemento en la parte inferior */
+width: 100%; /* Ocupa todo el ancho disponible */
+background-color: #78c2ad; /* Fondo semitransparente */
+box-sizing: border-box; /* Incluye el padding en el ancho total */
+text-align: left; /* Centra el texto horizontalmente */
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #78c2ad; /* Fondo verde */
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+footer nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer nav ul li {
+  margin: 0 10px; /* Reducción del espacio entre elementos */
+}
+
+footer nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Media query para ajustar el espaciado de los elementos en pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  footer nav ul li {
+      margin: 0 5px; /* Ajuste adicional del espacio entre elementos */
+  }
+}
+
+
+.social-icons {
+margin-top: 10px;
+}
+
+.social-icon {
+display: inline-block;
+margin: 0 10px;
+font-size: 20px;
+color: white;
+}
+
+.social-icon:hover {
+color: lightgreen;
+}
+table {
+  width: 100%;
+  border-collapse: collapse; /* Para que los bordes sean continuos */
+}
+
+th, td {
+  border: 1px solid #000000; /* Color del borde */
+  padding: 8px; /* Espaciado interno */
+  text-align: left; /* Alineación del texto */
+}
+
+th {
+  background-color: #ffffff; /* Fondo del encabezado */
+  font-weight: bold; /* Negrita para los encabezados */
+}
+
+tr:nth-child(even) {
+  background-color: #fffcfc; /* Color de fondo alterno para filas */
+}
+
+tr:hover {
+  background-color: #000000; /* Color de fondo al pasar el ratón */
+}

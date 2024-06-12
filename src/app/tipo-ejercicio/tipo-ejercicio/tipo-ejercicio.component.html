@@ -1,0 +1,52 @@
+<body>
+    <form>
+      <h3>Selecciona el tipo de ejercicios que desea realizar</h3>
+      <br>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="Fuerza" name="Fuerza" [(ngModel)]="Fuerza">
+        <label class="form-check-label" for="flexCheckDefault">
+        Fuerza
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="Cardio" name="Cardio" [(ngModel)]="Cardio">
+        <label class="form-check-label" for="flexCheckDefault">
+        Cardio
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="Estiramiento" name="Estiramiento" [(ngModel)]="Estiramiento">
+        <label class="form-check-label" for="flexCheckDefault">
+        Estiramiento
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="Levantamiento_de_pesas" name="Levantamiento_de_pesas" [(ngModel)]="Levantamiento_de_pesas">
+        <label class="form-check-label" for="flexCheckDefault">
+        Levantamiento de pesas
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="Pliometria" name="Pliometria" [(ngModel)]="Pliometria">
+        <label class="form-check-label" for="flexCheckDefault">
+        Pliometría
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="Atletismo_de_fuerza" name="Atletismo_de_fuerza" [(ngModel)]="Atletismo_de_fuerza">
+        <label class="form-check-label" for="flexCheckDefault">
+        Atletismo de fuerza
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="CrossFit" name="CrossFit" [(ngModel)]="CrossFit"> 
+        <label class="form-check-label" for="flexCheckDefault">
+        CrossFit 
+        </label>
+      </div>
+      <br>
+      <button class="boton-bonito" (click)="menu()">Continuar</button>
+      <button class="boton-bonito" (click)="volver()">Volver</button>
+      
+    </form>
+  </body>

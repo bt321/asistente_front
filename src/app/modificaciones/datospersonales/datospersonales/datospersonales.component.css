@@ -1,0 +1,116 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+}
+
+input, button {
+  margin-bottom: 10px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  background: linear-gradient(to right, #dff0de 100%, rgb(255, 255, 255) 0%);
+}
+.boton-bonito {
+  background-color: #78c2ad; /* Color de fondo */
+  border: none; /* Eliminar borde */
+  color: 333; /* Color de texto */
+  padding: 10px 10px; /* Espaciado interior */
+  text-align: center; /* Alinear texto al centro */
+  text-decoration: none; /* Eliminar subrayado */
+  display: inline-block;
+  font-size: 17px;
+  border-radius: 10px; /* Redondear esquinas */
+  transition: background-color 0.3s ease; /* Transición suave de color de fondo */
+}
+.boton-bonito:hover {
+  background-color: #00ac4dea; /* Cambiar color de fondo al pasar el ratón */
+}
+.logo {
+  margin-bottom: 20px;
+}
+.contenedor{
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  height: 100vh;
+}
+input[type="text"], button {
+  width: 100%;
+  max-width: 300px; /* Ancho máximo para evitar que se estiren demasiado en pantallas grandes */
+}
+.custom-navbar {
+background-color: #00ac4dea; /* Cambia el color de fondo del menú */
+}
+.custom-bg-color {
+background-color: #78c2ad; /* Cambia esto al color que desees */
+}
+.position-top-right {
+position: absolute;
+top: 10px; 
+right: 10px;
+
+}
+
+.image-container {
+  position: relative;
+ /* Ajusta el ancho según tus necesidades */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+.text-overlay {
+  position: absolute;
+  top: 10%; /* Centrar verticalmente */
+  left: 10px; /* Centrar horizontalmente */
+  color: rgb(0, 0, 0); /* Color del texto */
+  font-size: 24px; /* Tamaño del texto */
+  background-color: rgba(255, 255, 255, 0); /* Fondo semitransparente */
+  padding: 10px; /* Espaciado alrededor del texto */
+  border-radius: 10px; /* Bordes redondeados */
+}
+:host ::ng-deep .form-check-input {
+  background-color: lightgray;
+  border-color: gray;
+}
+
+:host ::ng-deep .form-check-input:checked {
+  background-color: rgb(0, 0, 0);
+  border-color: darkgray;
+}
+.container-icono {
+display: flex;
+align-items: center;
+position: absolute;
+top: 55px;
+left: 0;
+padding: 10px; /* Añade un poco de padding para separación del borde */
+}
+.icon, .btn {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.icon img {
+width: 24px;  /* Ajusta el tamaño según tus necesidades */
+height: 24px; /* Ajusta el tamaño según tus necesidades */
+}
+.btn {
+margin-left: 8px; /* Añade un margen entre el icono y el botón */
+padding: 0;
+border: none;
+background: none; /* Sin fondo */
+color: inherit; /* Hereda el color del texto */
+font: inherit; /* Hereda la fuente del texto */
+cursor: pointer;
+text-decoration: underline; /* Subraya el texto */
+}
