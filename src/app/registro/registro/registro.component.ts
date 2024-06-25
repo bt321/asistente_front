@@ -50,6 +50,10 @@ export class RegistroComponent implements OnInit {
       this.toastr.error('Las contraseñas no coinciden', 'Error');
       return;
     }
+    if(this.password.length < 8){
+      this.toastr.error('La contraseña debe contener mínimo 8 caracteres', 'Error')
+      return;
+    }
     const user: User = {
       username: this.username,
       password: this.password,

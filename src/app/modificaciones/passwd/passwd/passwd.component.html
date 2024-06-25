@@ -19,18 +19,18 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Actualizar datos</a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#" routerLink = '/passwd'>Cambiar contraseña</a>
-                  <a class="dropdown-item" href="#" routerLink = '/musculosentreno'>Cambiar musculos de entreno</a>
                   <a class="dropdown-item" href="#" routerLink = '/updateDatosPersonales'>Modificar datos personales</a>
+                  <a class="dropdown-item" href="#" routerLink = '/passwd'>Modificar contraseña</a>
+                  <a class="dropdown-item" href="#" routerLink = '/musculosentreno'>Modificar músculos de entreno</a>
                   <a class="dropdown-item" href="#" routerLink = '/updateObjetivo'>Modificar objetivos</a>
-                  <a class="dropdown-item" href="#" routerLink = '/descansoUpdate'>Cambiar dias de descanso</a>
-                  <a class="dropdown-item" href="#" routerLink = '/tipoEjer'>Cambiar tipo de ejercicios</a>
+                  <a class="dropdown-item" href="#" routerLink = '/descansoUpdate'>Modificar días de descanso</a>
+                  <a class="dropdown-item" href="#" routerLink = '/tipoEjer'>Modificar tipo de ejercicios</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#" routerLink ='/actualizar_datos'>Configuración</a>
                 </div>
               </li>
               <li class="nav-item" class="position-top-right">
-                <a class="nav-link active" href="#" routerLink = '/inicio_sesion'>Cerrar sesion</a>
+                <a class="nav-link active" href="#" routerLink = '/inicio_sesion'>Cerrar sesión</a>
               </li>
             </ul>
           </div>
@@ -42,7 +42,7 @@
           <div class="col-md-8">
                 <form >
                   <div class="form-group mb-3">
-                    <label for="password" class="form-label">Contraseña antigua</label>
+                    <label for="password" class="form-label">Contraseña actual</label>
                     <input type="password" id="password" [(ngModel)]="password_antigua" name="password_antigua" class="form-control" required>
                   </div>
       

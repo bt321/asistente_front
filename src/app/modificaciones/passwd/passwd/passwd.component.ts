@@ -32,6 +32,10 @@ export class PasswdComponent implements OnInit {
       this.toastr.error('Todos los campos son obligatorio', 'Error');
        return
     }
+    if(this.password_nueva.length < 8){
+      this.toastr.error('La contraseña debe contener mínimo 8 caracteres', 'Error')
+      return;
+    }
     const datos={
       oldPaasswd: this.password_antigua,
       newPasswd: this.password_nueva

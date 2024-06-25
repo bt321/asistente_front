@@ -1,5 +1,3 @@
-
-
 <body>
     <nav class="navbar navbar-expand-lg custom-bg-color" data-bs-theme="dark">
         <div class="container-fluid">
@@ -27,12 +25,12 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Actualizar datos</a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#" routerLink = '/passwd'>Cambiar contraseña</a>
-                  <a class="dropdown-item" href="#" routerLink = '/musculosentreno'>Cambiar músculos de entreno</a>
                   <a class="dropdown-item" href="#" routerLink = '/updateDatosPersonales'>Modificar datos personales</a>
+                  <a class="dropdown-item" href="#" routerLink = '/passwd'>Modificar contraseña</a>
+                  <a class="dropdown-item" href="#" routerLink = '/musculosentreno'>Modificar músculos de entreno</a>
                   <a class="dropdown-item" href="#" routerLink = '/updateObjetivo'>Modificar objetivos</a>
-                  <a class="dropdown-item" href="#" routerLink = '/descansoUpdate'>Cambiar días de descanso</a>
-                  <a class="dropdown-item" href="#" routerLink = '/tipoEjer'>Cambiar tipo de ejercicios</a>
+                  <a class="dropdown-item" href="#" routerLink = '/descansoUpdate'>Modificar días de descanso</a>
+                  <a class="dropdown-item" href="#" routerLink = '/tipoEjer'>Modificar tipo de ejercicios</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#" routerLink ='/actualizar_datos'>Configuración</a>
                 </div>
@@ -41,28 +39,8 @@
           </div>
         </div>
       </nav>
-       <!--
-      <div class="centered">
-      <div class="image-container">
-        
-        <img src="assets/185801-876514088.gif" >
        
-        
-        <div class="thought-bubble d-flex align-items-center justify-content-center">
-          <p class="text-center">Hola, soy tu asistente</p>
-        </div>
-        </div>
-
-       
-        <div class="text-overlay">
-          <figure class="text-center">
-            
-          </figure>
-        </div>
-       
-    </div>
-    </div>
-    -->
+      
 <div class="centered">
 <h1>¡Hola {{nombre}}!</h1>
 </div>
@@ -112,14 +90,31 @@
 
     
 </table>
+<div class="centered">
+  <div class="image-container">
+    <img src="assets/185801-876514088.gif" >
+   
+    <!--
+    <div class="thought-bubble d-flex align-items-center justify-content-center">
+      <p class="text-center">Hola, soy tu asistente</p>
+    </div>
+    </div>
 
+   
+    <div class="text-overlay">
+      <figure class="text-center">
+        
+      </figure>
+      -->
+    </div>
+</div>
 
 <footer>
   <nav>
       <ul>
           <li><a href="#home" routerLink = '/menu' >Inicio</a></li>
           <li><a href="#about" routerLink = '/sobreNosotros'>Sobre nosotros</a></li>
-          <li><a href="#services">Servicios</a></li>
+          <li><a href="#services" routerLink = '/servicios'>Servicios</a></li>
           <li><a href="#contact" routerLink = '/contacto'>Contacto</a></li>
       </ul>
   </nav>
@@ -128,8 +123,5 @@
     <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
     <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
 </div>
-</footer>
-
-      
-      
+</footer>      
 </body>

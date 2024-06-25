@@ -44,6 +44,7 @@ import { SobrenosotrosComponent } from './sobrenosotros/sobrenosotros/sobrenosot
 import { DescansoComponent } from './descanso/descanso/descanso.component';
 import { DescansoModule } from './descanso/descanso.module';
 import { ParteDesarrolloComponent } from './parte-desarrollo/parte-desarrollo/parte-desarrollo.component';
+import { ServiciosComponent } from './servicios/servicios/servicios.component';
 
 
 
@@ -67,7 +68,8 @@ import { ParteDesarrolloComponent } from './parte-desarrollo/parte-desarrollo/pa
     RecuperarpasswdComponent,
     Recuperarpasswd2Component,
     ContactoComponent,
-    SobrenosotrosComponent
+    SobrenosotrosComponent,
+    ServiciosComponent
   ],
   imports: [
     BrowserModule,

@@ -26,6 +26,7 @@ import { RecuperarpasswdComponent } from './recuperarpasswd/recuperarpasswd/recu
 import { Recuperarpasswd2Component } from './recuperarpasswd2/recuperarpasswd2/recuperarpasswd2.component';
 import { ContactoComponent } from './contacto/contacto/contacto.component';
 import { SobrenosotrosComponent } from './sobrenosotros/sobrenosotros/sobrenosotros.component';
+import { ServiciosComponent } from './servicios/servicios/servicios.component';
 
 const routes: Routes = [
   {path : '', component: HomeComponent},
@@ -52,7 +53,8 @@ const routes: Routes = [
   {path : 'recuperarPasswd', component: RecuperarpasswdComponent},
   {path : 'recuperarPasswd2', component: Recuperarpasswd2Component},
   {path : 'contacto', component: ContactoComponent},
-  {path : 'sobreNosotros', component: SobrenosotrosComponent}
+  {path : 'sobreNosotros', component: SobrenosotrosComponent},
+  {path : 'servicios', component: ServiciosComponent}
 
 ];
 

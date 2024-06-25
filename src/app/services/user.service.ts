@@ -100,7 +100,7 @@ export class UserService {
       token: token
     }
     this.rutinaService.actualizarRutina().subscribe(data =>{
-      this.toastr.success(`llamada al programada de rutina`, 'Éxito');
+      this.toastr.success(`Se ha actualizado tu rutina fitness`, 'Éxito');
     }, (event : HttpErrorResponse) => {
       console.log(event.error.msg);
       this.toastr.error(event.error.msg, 'Error')

@@ -31,6 +31,5 @@ export class ObjetivoService {
       data
     }
     return this.http.post(`${this.myAppUrl}${this.myApiUrl}updateObjetivo/`, datos);
-
   }
 }

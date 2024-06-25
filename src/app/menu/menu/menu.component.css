@@ -11,7 +11,7 @@ input, button {
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 200vh;
   display: flex;
   flex-direction: column;
   justify-content: top;
@@ -67,7 +67,7 @@ right: 10px;
 }
 
 .image-container img {
-  width: 10%;
+  width: 50%;
   height: auto;
 }
 

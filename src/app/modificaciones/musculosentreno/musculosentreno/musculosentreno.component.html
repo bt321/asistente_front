@@ -20,18 +20,18 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Actualizar datos</a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#" routerLink = '/passwd'>Cambiar contraseña</a>
-                  <a class="dropdown-item" href="#" routerLink = '/musculosentreno'>Cambiar musculos de entreno</a>
                   <a class="dropdown-item" href="#" routerLink = '/updateDatosPersonales'>Modificar datos personales</a>
+                  <a class="dropdown-item" href="#" routerLink = '/passwd'>Modificar contraseña</a>
+                  <a class="dropdown-item" href="#" routerLink = '/musculosentreno'>Modificar músculos de entreno</a>
                   <a class="dropdown-item" href="#" routerLink = '/updateObjetivo'>Modificar objetivos</a>
-                  <a class="dropdown-item" href="#" routerLink = '/descansoUpdate'>Cambiar dias de descanso</a>
-                  <a class="dropdown-item" href="#" routerLink = '/tipoEjer'>Cambiar tipo de ejercicios</a>
+                  <a class="dropdown-item" href="#" routerLink = '/descansoUpdate'>Modificar días de descanso</a>
+                  <a class="dropdown-item" href="#" routerLink = '/tipoEjer'>Modificar tipo de ejercicios</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#" routerLink ='/actualizar_datos'>Configuración</a>
                 </div>
               </li>
               <li class="nav-item" class="position-top-right">
-                <a class="nav-link active" href="#" routerLink = '/inicio_sesion'>Cerrar sesion</a>
+                <a class="nav-link active" href="#" routerLink = '/inicio_sesion'>Cerrar sesión</a>
               </li>
             </ul>
           </div>
@@ -41,17 +41,17 @@
       <div class="container mt-5">
         <div class="card">
           <div class="card-header d-flex justify-content-between align-items-center">
-            <h3>Cambiar musculos de entreno</h3>
+            <h3>Modificar músculos de entreno</h3>
             <button type="button" class="boton-bonito" *ngIf="!editMode" (click)="toggleEditMode()">Editar</button>
             
           </div>
           <div class="card-body">
             <form>
               <label class="form-check-label" for="flexCheckDefault">
-                Musculo de desarrollo
+                Músculo de desarrollo
                 </label>
               <select class="form-control" id="exampleSelect" name="musculoDesarrollo" [(ngModel)]="musculoDesarrollo" [disabled]="!editMode">
-                <option value="" disabled selected>Selecciona musculo a desarrollar</option>
+                <option value="" disabled selected>Selecciona músculo a desarrollar</option>
                     <option value="Abdominales">Abdominales</option>
                     <option value="Aductores">Aductores</option>
                     <option value="Abductores">Abductores</option>
@@ -72,10 +72,10 @@
                 <br>
         
                 <label class="form-check-label" for="flexCheckDefault">
-                  Musculo fuerte
+                  Músculo fuerte
                   </label>
                         <select class="form-control" id="exampleSelect" name="musculoFuerte" [(ngModel)]="musculoFuerte" [disabled]="!editMode">
-                        <option value="" disabled selected>Selecciona musculo fuerte</option>
+                        <option value="" disabled selected>Selecciona músculo fuerte</option>
                             <option value="Abdominales">Abdominales</option>
                             <option value="Aductores">Aductores</option>
                             <option value="Abductores">Abductores</option>
@@ -96,7 +96,7 @@
                         <br>
 
                         <label class="form-check-label" for="flexCheckDefault">
-                          Selecciona otros musculos
+                          Selecciona otros músculos
                           </label>                    
         
                         <div class="form-check">
