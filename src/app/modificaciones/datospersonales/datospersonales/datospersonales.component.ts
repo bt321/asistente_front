@@ -55,11 +55,20 @@ export class DatospersonalesComponent implements OnInit {
     this.getDatopPersonales()
   }
 
+  isValidEmail(email: string): boolean {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
   saveChanges() {
-    if(this.nombre == '' || this.apellidos == '' || this.genero == '' || this.nivel_experiencia == '' ){
+    if(this.nombre == '' || this.apellidos == '' || this.genero == '' || this.nivel_experiencia == '' || this.email=='' ){
       this.toastr.error('Todos los campos son obligatorios', 'Error')
       return
     }
+    if(!this.isValidEmail(this.email)){
+      this.toastr.error('El correo electrónico no es válido', 'Error')
+      return
+   }
     if(this.altura <= 0){
       this.toastr.error('La altura no puede ser negativa o nulo', 'Error')
       return
@@ -81,8 +90,6 @@ export class DatospersonalesComponent implements OnInit {
         this.toastr.success('Datos personales actualizados correctamente', 'Éxito')
         const rutaActual = this.route.url;
         this.rutinaService.actualizarRutina().subscribe(data =>{   
-
-          this.toastr.success('¡Has actualizado tu rutina!');
     
         }, (event : HttpErrorResponse) => {
           console.log(event.error.msg);

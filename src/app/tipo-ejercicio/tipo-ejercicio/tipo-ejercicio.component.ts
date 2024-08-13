@@ -56,15 +56,17 @@ export class TipoEjercicioComponent implements OnInit {
     }
     this.tipoEjercicioSeleccionado = this.tipoEjercicioSeleccionado.slice(0, -2);
     this.userService.setTipoEjercicios(this.tipoEjercicioSeleccionado)
-    this.userService.signIn().subscribe(data =>{
-      this.toastr.success(`Se ha registrado correctamente`, 'Éxito')
-      this.route.navigate(['/inicio_sesion']);
-            
-    }, (event : HttpErrorResponse) => {
-      console.log(event.error.msg);
-      this.toastr.error(event.error.msg, 'Error')
-    })
+    //this.userService.signIn().subscribe(data =>{
+    //  this.toastr.success(`Se ha registrado correctamente`, 'Éxito')
+    //  this.route.navigate(['/inicio_sesion']);
+    //}  
+    //, (event : HttpErrorResponse) => {
+    //  console.log(event.error.msg);
+    //  this.toastr.error(event.error.msg, 'Error')
+    //})
+    this.userService.registrarUsuarioYGenerarRutina();
+    
     //this.toastr.success(`Usuario registrado correctamente`, 'Dado de alta');
-    //this.route.navigate(['/menu']);
+    //this.route.navigate(['/menu']); 
   }
 }

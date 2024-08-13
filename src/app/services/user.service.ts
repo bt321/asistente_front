@@ -7,6 +7,7 @@ import { ParteDesarrolloComponent } from '../parte-desarrollo/parte-desarrollo/p
 import { Musculos } from '../interfaces/musculos';
 import { RutinaService } from './rutina.service';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -56,7 +57,7 @@ export class UserService {
   }
 
 
-  constructor(private http : HttpClient, private rutinaService : RutinaService, private toastr: ToastrService) { 
+  constructor(private http : HttpClient, private rutinaService : RutinaService, private toastr: ToastrService, private route : Router) { 
     this.myAppUrl = environment.endpont;
     this.myApiUrl = 'api/users/';
   }
@@ -74,16 +75,43 @@ export class UserService {
     this.datosRegistro.musculoentreno= musculos;
     console.log(this.datosRegistro);
     
-    this.rutinaService.generarRutina(this.datosRegistro).subscribe(data =>{
-      this.toastr.success(`llamada al programada de rutina`, 'Éxito');
-    }, (event : HttpErrorResponse) => {
-      console.log(event.error.msg);
-      this.toastr.error(event.error.msg, 'Error')
-    });
+    //this.rutinaService.generarRutina(this.datosRegistro).subscribe(data =>{
+    //  this.toastr.success(`llamada al programada de rutina`, 'Éxito');
+    //}, (event : HttpErrorResponse) => {
+    //  console.log(event.error.msg);
+    //  this.toastr.error(event.error.msg, 'Error')
+    //});
 
-    return this.http.post(`${this.myAppUrl}${this.myApiUrl}`, this.datosRegistro
-    );     
-  };
+    return this.http.post(`${this.myAppUrl}${this.myApiUrl}`, this.datosRegistro);     
+  }
+  registrarUsuarioYGenerarRutina() {
+    const musculos : Musculos = {  
+      musculo_desarrollo: this.datosRegistro.parteDesarrollo,
+      musculo_fuerte: this.datosRegistro.parteFuerte,
+      otros_musculos: this.datosRegistro.otrasPartes 
+      }
+    this.datosRegistro.musculoentreno= musculos;
+
+    this.signIn().subscribe({
+      next: data => {
+        this.toastr.success('Se ha registrado correctamente', 'Éxito');
+        this.rutinaService.generarRutina(this.datosRegistro).subscribe({
+          next: rutinaData => {
+            //this.toastr.success('Rutina generada exitosamente', 'Éxito');
+            this.route.navigate(['/inicio_sesion'])
+          },
+          error: (event: HttpErrorResponse) => {
+            console.log(event.error.msg);
+            this.toastr.error(event.error.msg, 'Error');
+          }
+        });
+      },
+      error: (event: HttpErrorResponse) => {
+        console.log(event.error.msg);
+        this.toastr.error(event.error.msg, 'Error');
+      }
+    });
+  }
 
   
 

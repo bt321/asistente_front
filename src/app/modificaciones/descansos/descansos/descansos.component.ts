@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { UserService } from '../../../services/user.service';
 import { ToastrService } from 'ngx-toastr';
 import { HttpErrorResponse } from '@angular/common/http';
+import { HomeService } from '../../../services/home.service';
 
 @Component({
   selector: 'app-descansos',
@@ -10,9 +11,12 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrl: './descansos.component.css'
 })
 export class DescansosComponent implements OnInit {
-  ngOnInit() {  }
+  ngOnInit() { 
+    this.getDatosUser()
+   }
   editMode = false;
   diasSeleccionados: string = ''
+  diasSemana:string[]=[]
   Lunes: string = ''
   Martes: string = ''
   Miercoles: string = ''
@@ -23,7 +27,41 @@ export class DescansosComponent implements OnInit {
 
   
   
-  constructor(private route : Router, private userService: UserService,  private toastr: ToastrService){}
+  constructor(private route : Router, private userService: UserService,  private toastr: ToastrService, private homeService : HomeService){}
+
+  getDatosUser(){
+    this.homeService.getDatosUser().subscribe((data) =>{      
+      this.diasSemana = data.diasDescanso[0].dias_semana.split(", ")
+      if(this.diasSemana.includes("Lunes")){
+        this.Lunes="true"
+      }
+      if(this.diasSemana.includes("Martes")){
+        this.Martes="true"
+      }
+      if(this.diasSemana.includes("Miercoles")){
+        this.Miercoles="true"
+      }
+      if(this.diasSemana.includes("Jueves")){
+        this.Jueves="true"
+      }
+      if(this.diasSemana.includes("Viernes")){
+        this.Viernes="true"
+      }
+      if(this.diasSemana.includes("Sabado")){
+        this.Sabado="true"
+      }
+      if(this.diasSemana.includes("Domingo")){
+        this.Domingo="true"
+      }
+     
+      
+    }, (event : HttpErrorResponse) => {
+      console.log(event.error.msg);
+      this.toastr.error(event.error.msg, 'Error')
+    })
+  
+  
+  }
 
    diasSelec(){
      if(this.Lunes){

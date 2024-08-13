@@ -4,6 +4,7 @@ import { UserService } from '../../../services/user.service';
 import { ToastrService } from 'ngx-toastr';
 import { HttpErrorResponse } from '@angular/common/http';
 import { RutinaService } from '../../../services/rutina.service';
+import { HomeService } from '../../../services/home.service';
 
 @Component({
   selector: 'app-musculosentreno',
@@ -11,10 +12,13 @@ import { RutinaService } from '../../../services/rutina.service';
   styleUrl: './musculosentreno.component.css'
 })
 export class MusculosentrenoComponent implements OnInit {
-  ngOnInit() {  }
+  ngOnInit() { 
+    this.getDatosUser()
+   }
   editMode = false;
   musculoDesarrollo:string=''
   musculoFuerte:string=''
+  otrosMusculos:string[]=[]
   otrasPartesSeleccionadas:string ='';
   Abdominales:string='';
   Aductores:string='';
@@ -33,7 +37,76 @@ export class MusculosentrenoComponent implements OnInit {
   Cuadriceps:string='';
   Hombros:string='';
   Triceps:string='';
-  constructor(private route : Router, private userService: UserService,  private toastr: ToastrService, private rutinaService : RutinaService){}
+  constructor(private route : Router, private userService: UserService,  private toastr: ToastrService, private rutinaService : RutinaService, private homeService : HomeService){}
+
+
+  getDatosUser(){
+    this.homeService.getDatosUser().subscribe((data) =>{
+      console.log(data)
+      //this.musculo_desarrollo = data.musculoEntreno[0].musculo_desarrollo
+
+      this.musculoDesarrollo= data.MusculoEntreno[0].musculo_desarrollo;
+      this.musculoFuerte =data.MusculoEntreno[0].musculo_fuerte;
+      this.otrosMusculos =data.MusculoEntreno[0].otros_musculos.split(", "); 
+      if(this.otrosMusculos.includes("Abdominales")){
+        this.Abdominales="true"
+      }
+      if(this.otrosMusculos.includes("Aductores")){
+        this.Aductores="true"
+      }
+      if(this.otrosMusculos.includes("Abductores")){
+        this.Abductores="true"
+      }
+      if(this.otrosMusculos.includes("Bíceps")){
+        this.Biceps="true"
+      }
+      if(this.otrosMusculos.includes("Gemelos")){
+        this.Gemelos="true"
+      }
+      if(this.otrosMusculos.includes("Pecho")){
+        this.Pecho="true"
+      }
+      if(this.otrosMusculos.includes("Antebrazos")){
+        this.Antebrazos="true"
+      }
+      if(this.otrosMusculos.includes("Glúteos")){
+        this.Gluteos="true"
+      }
+      if(this.otrosMusculos.includes("Isquiotibiales")){
+        this.Isquiotibiales="true"
+      }
+      if(this.otrosMusculos.includes("Dorsales")){
+        this.Dorsales="true"
+      }
+      if(this.otrosMusculos.includes("Espalda baja")){
+        this.Espalda_baja="true"
+      }
+      if(this.otrosMusculos.includes("Espalda media")){
+        this.Espalda_media="true"
+      }
+      if(this.otrosMusculos.includes("Trapecio")){
+        this.Trapecio="true"
+      }
+      if(this.otrosMusculos.includes("Cuello")){
+        this.Cuello="true"
+      }
+      if(this.otrosMusculos.includes("Cuádriceps")){
+        this.Cuadriceps="true"
+      }
+      if(this.otrosMusculos.includes("Hombros")){
+        this.Hombros="true"
+      }
+      if(this.otrosMusculos.includes("Tríceps")){
+        this.Triceps="true"
+      }
+      
+    }, (event : HttpErrorResponse) => {
+      console.log(event.error.msg);
+      this.toastr.error(event.error.msg, 'Error')
+    })
+  
+  
+  }
 
   parteSelec(){
     if(this.Abdominales){
@@ -86,7 +159,7 @@ export class MusculosentrenoComponent implements OnInit {
     }
     if(this.Trapecio){
       //this.otrasPartesSeleccionadas.push('Traps');
-      this.otrasPartesSeleccionadas += 'Traps, ';
+      this.otrasPartesSeleccionadas += 'Trapecio, ';
     }
     if(this.Cuello){
       //this.otrasPartesSeleccionadas.push('Cuello');

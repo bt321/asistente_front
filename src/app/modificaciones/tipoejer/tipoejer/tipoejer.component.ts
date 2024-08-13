@@ -4,6 +4,7 @@ import { UserService } from '../../../services/user.service';
 import { ToastrService } from 'ngx-toastr';
 import { RutinaService } from '../../../services/rutina.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { HomeService } from '../../../services/home.service';
 
 @Component({
   selector: 'app-tipoejer',
@@ -13,6 +14,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 export class TipoejerComponent implements OnInit {
   editMode = false;
   tipoEjercicioSeleccionado:string='';
+  tipoEjercicios:string[]=[]
   Fuerza:string='';
   Cardio:string='';
   Estiramiento:string='';
@@ -20,8 +22,47 @@ export class TipoejerComponent implements OnInit {
   Pliometria:string='';
   Atletismo_de_fuerza:string='';
   CrossFit:string='';
-  constructor(private route : Router, private userService : UserService, private toastr: ToastrService, private rutinaService : RutinaService){}
-  ngOnInit() {}
+  constructor(private route : Router, private userService : UserService, private toastr: ToastrService, private rutinaService : RutinaService, private homeService : HomeService){}
+  ngOnInit() {
+    this.getDatosUser()
+  }
+
+  getDatosUser(){
+    this.homeService.getDatosUser().subscribe((data) =>{    
+      console.log(data)
+      
+      this.tipoEjercicios=data.tipoEjercicios[0].tipoEjercicio.split(", ")
+      if(this.tipoEjercicios.includes("Fuerza")){
+        this.Fuerza="true"
+      } 
+      if(this.tipoEjercicios.includes("Cardio")){
+        this.Cardio="true"
+      } 
+      if(this.tipoEjercicios.includes("Estiramiento")){
+        this.Estiramiento="true"
+      } 
+      if(this.tipoEjercicios.includes("Levantamiento de pesas")){
+        this.Levantamiento_de_pesas="true"
+      } 
+      if(this.tipoEjercicios.includes("Pliometria")){
+        this.Pliometria="true"
+      } 
+      if(this.tipoEjercicios.includes("Atletismo de fuerza")){
+        this.Atletismo_de_fuerza="true"
+      } 
+      if(this.tipoEjercicios.includes("CrossFit")){
+        this.CrossFit="true"
+      }
+      
+     
+      
+    }, (event : HttpErrorResponse) => {
+      console.log(event.error.msg);
+      this.toastr.error(event.error.msg, 'Error')
+    })
+  
+  
+  }
 
   tipoSeleccionado(){
     if(this.Fuerza){
